@@ -66,7 +66,7 @@
       color: #000000;
       font-size: 14px;
       line-height: 25px;
-      
+
     }
 
     hr.line {
@@ -102,7 +102,7 @@
       text-decoration: none;
     }
 
- 
+
 
   </style>
 
@@ -120,7 +120,7 @@
         <tr>
           <td height="70" style="background-color: #f3f2ee"></td>
         </tr>
-       
+
         <!-- end top border -->
 
         <!-- Logo header -->
@@ -157,55 +157,52 @@
         <!-- Start image banner -->
         <tr>
           <td style="padding: 0 45px; margin-top: 5px">
-            <p class="heading-main">GTID Intranet and Bookmarks<br /></p>
+            <p class="heading-main"><span id="employeeName"><br /></p>
           </td>
         </tr>
         <tr>
           <td style="padding: 0 45px; margin-top: 5px">
-            <p class="text-main"><span id="employeeName"></span></p>
+            <p class="text-main">GREETING <span id="greeting2"></span></p>
             <br />
           </td>
         </tr>
         <tr>
           <td style="padding: 0 45px; text-align: justify !important;">
-            <span class="main-text">
-              <span id="employeeDescription"></span>
-              <br />
-              <br>
+            <span id="employeeDescription" class="main-text">
             </span>
-          </td> 
+          </td>
         </tr>
         <tr>
           <td style="padding: 0 45px; text-align: justify !important;">
             <span class="main-text">
-            
-             
+
+
             </span>
-          </td> 
+          </td>
         </tr>
         <!-- image -->
          <tr>
           <td style="padding: 0 45px; margin-top: 5px;">
             <p class="heading-main-2">
-              <span id="employeeTitle1"></span>
+              <span id="title1"></span>
             </p>
           </td>
          </tr>
          <tr>
           <td>
-            <img id="employeePhotoDisplay" alt="Mictosoft Edge">
-            
+            <img src="https://mcusercontent.com/2f271464d47c6c41dd78e65aa/images/0de794aa-c3b7-bb76-18ae-34240ad0362f.png" id="image1" alt="Employee Photo" width="600" class="adapt-img" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none">
           </td>
          </tr>
          <tr>
           <td style="padding: 0 45px; margin-top: 5px;">
             <p class="heading-main-2">
-             <span id="employeeTitle2"></span> </p>
+              <span id="title2"></span>
+            </p>
           </td>
          </tr>
          <tr>
           <td class="img-2">
-            <img id="employeePhotoDisplay2">
+            <img src="https://mcusercontent.com/2f271464d47c6c41dd78e65aa/images/99c7e25a-e4ba-c0aa-9d14-b79af4c993cd.png" id="image2" alt="Employee Photo" width="600" class="adapt-img" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none">
           </td>
          </tr>
         <tr>
@@ -215,13 +212,13 @@
         </tr>
         <tr>
           <td style="padding: 0 45px">
-            
+
             <br />
           </td>
         </tr>
         <tr>
           <td style="padding: 0 45px">
-          
+
           </td>
         </tr>
       </table>
@@ -310,25 +307,23 @@
       </table>
     </table>
   </body>
-  <script>
-    // Mengambil data dari localStorage dan menampilkan di halaman
-    document.getElementById('employeeName').textContent = localStorage.getItem('employeeName') || '';
-    document.getElementById('employeeDescription').innerHTML = localStorage.getItem('employeeDescription') || '';
-    document.getElementById('employeeTitle1').textContent = localStorage.getItem('employeeTitle1') || '';
-    document.getElementById('employeeTitle2').textContent = localStorage.getItem('employeeTitle2') || '';
-  
-    // Tampilkan gambar pertama jika ada di localStorage
-    const image1 = localStorage.getItem('employeePhotoDisplay');
-    if (image1) {
-      document.getElementById('employeePhotoDisplay').src = image1;
-    }
-  
-    // Tampilkan gambar kedua jika ada di localStorage
-    const image2 = localStorage.getItem('employeePhotoDisplay2');
-    if (image2) {
-      document.getElementById('employeePhotoDisplay2').src = image2;
-    }
-  </script>
-  
 </html>
+<script>
+  // Retrieve data from localStorage and display it on the page
+  document.getElementById('employeeName').textContent = localStorage.getItem('employeeName2');
+  document.getElementById('employeeDescription').innerHTML = localStorage.getItem('employeeDescription2');
+  document.getElementById('title1').innerHTML = localStorage.getItem('title1');
+  document.getElementById('title2').innerHTML = localStorage.getItem('title2');
+  document.getElementById('greeting2').innerHTML = localStorage.getItem('greeting2');
 
+  var image1 = null
+  image1 =localStorage.getItem('image1');
+  if (!(image1==null || image1=="" || image1==undefined)) {
+    document.getElementById('image1').src = image1;
+  }
+  var image2 = null
+  image2 =localStorage.getItem('image2');
+  if (!(image2==null || image2=="" || image2==undefined)) {
+    document.getElementById('image2').src = image2;
+  }
+</script>
